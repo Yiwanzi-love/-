@@ -70,3 +70,4 @@ def gen():
     print(f'\u6784\u5efa\u5b8c\u6210\uff0c\u5171 {n} \u4e2a\u9875\u9762')
 
 if __name__ == '__main__': gen()
+# Knowledge base build script
