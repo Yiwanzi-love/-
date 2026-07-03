@@ -1,0 +1,14 @@
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" stroke="#e85d3a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+   <!-- 外圈 -->
+   <circle cx="30" cy="30" r="22" stroke="#1a1a1a" stroke-width="2"/>
+   <!-- 中圈 -->
+   <circle cx="30" cy="30" r="14" stroke="#e85d3a" stroke-width="1.8" opacity="0.6"/>
+   <!-- 内圈 -->
+   <circle cx="30" cy="30" r="6" stroke="#e85d3a" stroke-width="2.5"/>
+   <!-- 箭头 -->
+   <path d="M48 12l-10 16" stroke="#1a1a1a" stroke-width="2.2"/>
+   <path d="M36 28l4-2-2 4" stroke="#1a1a1a" stroke-width="2.2"/>
+   <!-- 装饰点 -->
+   <circle cx="46" cy="14" r="1.5" fill="#e85d3a" stroke="none"/>
+ </svg>
+ 

@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>项目搭建记录 - KB</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css"></head><body><div class=app><aside class=sidebar id=sidebar><div class=sidebar-header><a href=../../ class=sidebar-logo style=text-decoration:none;color:inherit><span class=sidebar-logo-img>K</span> 个人知识库</a></div><nav class=sidebar-nav><div class=nav-section><button class=nav-section-toggle onclick=ts(this)><span class=arrow>▶</span> 创意生产方法论</button><div class=nav-sub style=display:none><a href=pages/creative/ class=nav-item>概述</a><a href=pages/creative/finance/ class=nav-item>金融行业</a><a href=pages/creative/education/ class=nav-item>教育行业</a><a href=pages/creative/cases/ class=nav-item>案例库</a></div></div><div class=nav-section><button class=nav-section-toggle onclick=ts(this)><span class=arrow>▶</span> 平台素材生态</button><div class=nav-sub style=display:none><a href=pages/platform/ class=nav-item>概述</a><a href=pages/platform/strategy/ class=nav-item>策略介绍</a><a href=pages/platform/supply/ class=nav-item>供给方法</a><a href=pages/platform/cases/ class=nav-item>案例库</a></div></div><a href=pages/toolkit/ class=nav-item style=display:block;padding:0.35rem 0.9rem>个人工具库</a><a href=pages/tags/ class=nav-item style=display:block;padding:0.35rem 0.9rem>标签</a><a href=pages/buildlog/ class=nav-item style=display:block;padding:0.35rem 0.9rem>搭建记录</a></nav></aside><main class=main><article><div class=page-header><h1>项目搭建记录</h1></div><div class=page-content><h1 id="_1">项目搭建记录</h1>
+<p>本文档记录了个人知识库网站从零到一的搭建过程，包括需求分析、方案选型、内容框架设计和技术实现的完整思考链路。</p>
+<hr />
+<p>## 背景</p>
+<p>互联网广告行业运营，即将转岗到新业务担任行业运营。
+ 希望将多年积累的 SOP、方法论、案例库等内容沉淀为一个个人知识库网站。</p>
+<p>时间：2026年7月</p>
+<hr />
+<p>## 核心需求</p>
+<p>经过讨论，明确了知识库的三个核心用途：</p>
+<ol>
+<li><strong>个人资产集合</strong> — 见证成长与沉淀，后续可做 AI 蒸馏，模仿个人观点和写作风格完成基础工作</li>
+<li><strong>对外专业展示</strong> — 部分内容作为公开可查阅的信息库，展示行业专业能力，需实时更新迭代</li>
+<li><strong>可控分享</strong> — 不需要被公网搜索引擎收录，分享链接的人能打开即可</li>
+</ol>
+<hr />
+<p>## 方案选型</p>
+<p>对比了几条路线后，最终选择了：</p>
+<p><strong>Obsidian（写作+管理） + MkDocs Material（静态站点） + GitHub/Cloudflare Pages（托管）</strong></p>
+<p>选择理由：</p>
+<ul>
+<li><strong>内容即 Markdown</strong>：不锁定在任何平台，也最适合未来做 AI 训练/RAG 的数据源</li>
+<li><strong>更新即发布</strong>：在 Obsidian 里写完、保存、推送 GitHub，自动部署</li>
+<li><strong>零成本</strong>：所有工具免费，托管免费</li>
+<li><strong>可控制访问</strong>：站点不主动索引，仅分享链接的人能打开</li>
+</ul>
+<hr />
+<p>## 内容框架</p>
+<p>知识库分为三大核心模块：</p>
+<p>### 创意生产方法论</p>
+<ul>
+<li>金融行业（已有现成历史整理文档）</li>
+<li>教育行业</li>
+<li>案例库</li>
+</ul>
+<p>### 创意策略-平台素材生态方向</p>
+<ul>
+<li>策略介绍</li>
+<li>供给方法</li>
+<li>案例库</li>
+</ul>
+<p>### 个人工具库</p>
+<p>可复用的模板、对照表、检查清单。</p>
+<hr />
+<p>## 技术实现</p>
+<p>使用 Python 的 MkDocs 框架配合 Material 主题，在本地环境搭建完毕。</p>
+<p>项目位置：<code>C:\Users\admin\Documents\Codex\knowledge-base\</code></p>
+<p>核心文件：</p>
+<ul>
+<li><code>mkdocs.yml</code> — 站点配置（导航、主题、插件）</li>
+<li><code>docs/</code> — Obsidian Vault 内容目录（Markdown 源文件）</li>
+<li><code>site/</code> — 构建产物（静态 HTML）</li>
+</ul>
+<p>工作流：</p>
+<ol>
+<li>在 Obsidian 中编辑 <code>docs/</code> 下的 Markdown 文件</li>
+<li>保存后，<code>mkdocs serve</code> 实时预览（<code>http://127.0.0.1:8000</code>）</li>
+<li>内容稳定后，推送到 GitHub，自动部署到 Cloudflare Pages</li>
+</ol>
+<hr />
+<p><em>此文档由 Codex（GPT-5）在搭建过程中自动生成，记录了完整的思考和决策过程。</em></p></div></article></main></div><button class="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+<script>
+function ts(b){var s=b.nextElementSibling;var a=b.querySelector('.arrow');if(!s||s.style.display=='none'||s.style.display==''){s.style.display='block';if(a)a.classList.add('open')}else{s.style.display='none';if(a)a.classList.remove('open')}}
+function tm(){document.getElementById('sidebar').classList.toggle('open')}
+document.addEventListener('DOMContentLoaded',function(){var p=window.location.pathname;document.querySelectorAll('.nav-item').forEach(function(i){var h=i.getAttribute('href');if(h&&(p==h||p==h+'index.html'||p.startsWith(h))){i.classList.add('active');var s=i.closest('.nav-section');if(s){var b=s.querySelector('.nav-section-toggle');if(b){b.nextElementSibling.style.display='block';var a=b.querySelector('.arrow');if(a)a.classList.add('open')}}}})})})
+</script></body></html>

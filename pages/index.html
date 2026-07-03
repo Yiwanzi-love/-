@@ -1,0 +1,168 @@
+ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="互联网广告行业运营知识沉淀与方法论">
+   <title>个人知识库</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/style.css">
+ </head>
+ <body>
+ 
+ <div class="app">
+   <!-- 侧边栏 -->
+   <aside class="sidebar" id="sidebar">
+     <div class="sidebar-header">
+       <div class="sidebar-logo">
+         <span class="sidebar-logo-img">K</span>
+         个人知识库
+       </div>
+     </div>
+     <nav class="sidebar-nav" id="nav">
+       <div class="nav-section">
+         <button class="nav-section-toggle" onclick="toggleSection(this)">
+           <span class="arrow">&#9654;</span> 创意生产方法论
+         </button>
+         <div class="nav-sub" style="display:none">
+             <a href="pages/creative/" class="nav-item">概述</a>
+           <a href="pages/creative/finance/" class="nav-item">金融行业</a>
+           <a href="pages/creative/education/" class="nav-item">教育行业</a>
+           <a href="pages/creative/cases/" class="nav-item">案例库</a>
+         </div>
+       </div>
+       <div class="nav-section">
+         <button class="nav-section-toggle" onclick="toggleSection(this)">
+           <span class="arrow">&#9654;</span> 平台素材生态
+         </button>
+         <div class="nav-sub" style="display:none">
+           <a href="pages/platform/" class="nav-item">概述</a>
+           <a href="pages/platform/strategy/" class="nav-item">策略介绍</a>
+           <a href="pages/platform/supply/" class="nav-item">供给方法</a>
+           <a href="pages/platform/cases/" class="nav-item">案例库</a>
+         </div>
+       </div>
+       <a href="pages/toolkit/" class="nav-item" style="display:block;padding:0.35rem 0.9rem">个人工具库</a>
+       <a href="pages/tags/" class="nav-item" style="display:block;padding:0.35rem 0.9rem">标签</a>
+       <a href="pages/buildlog/" class="nav-item" style="display:block;padding:0.35rem 0.9rem">搭建记录</a>
+     </nav>
+   </aside>
+ 
+   <!-- 主内容 -->
+   <main class="main">
+ 
+     <!-- 首页 Hero -->
+     <section class="hero-section">
+       <div class="hero-doodle">
+         <img src="assets/images/hero-doodle.svg" alt="hero illustration" class="doodle-float">
+       </div>
+       <h1>个人知识库</h1>
+       <p class="hero-subtitle">
+         互联网广告行业运营方法论的沉淀与分享。<br>
+         可持续复用的知识体系，见证成长与专业积累。
+       </p>
+     </section>
+ 
+     <!-- 模块卡片 -->
+     <div class="module-grid">
+       <a href="pages/creative/" class="module-card">
+         <div class="module-card-icon">
+           <img src="assets/images/doodle-pen.svg" alt="创意生产">
+         </div>
+         <h3>创意生产方法论</h3>
+         <p>金融、教育等多行业的投放策略、素材方向与实战框架。</p>
+         <div class="module-card-tags">
+           <span>金融行业</span>
+           <span>教育行业</span>
+           <span>案例库</span>
+         </div>
+       </a>
+       <a href="pages/platform/" class="module-card">
+         <div class="module-card-icon">
+           <img src="assets/images/doodle-target.svg" alt="平台素材生态">
+         </div>
+         <h3>平台素材生态</h3>
+         <p>创意策略框架、素材供给方法、平台生态的系统性理解。</p>
+         <div class="module-card-tags">
+           <span>策略介绍</span>
+           <span>供给方法</span>
+           <span>案例库</span>
+         </div>
+       </a>
+       <a href="pages/toolkit/" class="module-card">
+         <div class="module-card-icon">
+           <img src="assets/images/doodle-tools.svg" alt="个人工具库">
+         </div>
+         <h3>个人工具库</h3>
+         <p>可复用的模板、对照表、检查清单和工作流程。</p>
+         <div class="module-card-tags">
+           <span>检查清单</span>
+           <span>模板</span>
+           <span>常用工具</span>
+         </div>
+       </a>
+     </div>
+ 
+     <!-- 底部 -->
+     <div class="home-footer">
+       <p>
+         这是一个持续更新的知识库，承载行业运营以来的经验与方法论沉淀。
+         通过<a href="pages/tags/">标签索引</a>或搜索框可快速定位内容。
+       </p>
+       <div class="home-footer-stats">
+         <span><strong>3</strong> 大模块</span>
+         <span><strong>10</strong> 篇文章</span>
+         <span>持续更新中</span>
+       </div>
+     </div>
+ 
+   </main>
+ </div>
+ 
+ <!-- 移动端菜单按钮 -->
+ <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+ 
+ <script>
+ // 侧边栏展开/收起
+ function toggleSection(btn) {
+   const sub = btn.nextElementSibling;
+   const arrow = btn.querySelector('.arrow');
+   if (sub.style.display === 'none' || sub.style.display === '') {
+     sub.style.display = 'block';
+     arrow.classList.add('open');
+   } else {
+     sub.style.display = 'none';
+     arrow.classList.remove('open');
+   }
+ }
+ 
+ // 高亮当前页面对应的导航项
+ document.addEventListener('DOMContentLoaded', function() {
+   const path = window.location.pathname;
+   document.querySelectorAll('.nav-item').forEach(function(item) {
+     const href = item.getAttribute('href');
+     if (href && (path === href || path === href + 'index.html' || path.startsWith(href))) {
+       item.classList.add('active');
+       // 展开父级 section
+       const section = item.closest('.nav-section');
+       if (section) {
+         const btn = section.querySelector('.nav-section-toggle');
+         const sub = btn.nextElementSibling;
+         sub.style.display = 'block';
+         btn.querySelector('.arrow').classList.add('open');
+       }
+     }
+   });
+ });
+ 
+ // 移动端菜单
+ function toggleMobileMenu() {
+   document.getElementById('sidebar').classList.toggle('open');
+ }
+ </script>
+ 
+ </body>
+ </html>
+ 

@@ -1,0 +1,73 @@
+ site_name: 个人知识库
+ site_description: 互联网广告行业运营知识沉淀与方法论
+ 
+ theme:
+   name: material
+   language: zh
+   features:
+     - navigation.tabs
+     - navigation.tabs.sticky
+     - navigation.sections
+     - navigation.indexes
+     - navigation.top
+     - search.highlight
+     - content.code.copy
+   palette:
+     - scheme: default
+       primary: deep orange
+       accent: deep orange
+       toggle:
+         icon: material/weather-night
+         name: 深色模式
+     - scheme: slate
+       primary: deep orange
+       accent: deep orange
+       toggle:
+         icon: material/weather-sunny
+         name: 浅色模式
+ 
+ plugins:
+   - search:
+       lang:
+         - zh
+         - en
+   - tags:
+       tags_file: tags.md
+ 
+ markdown_extensions:
+   - admonition
+   - pymdownx.details
+   - pymdownx.superfences
+   - pymdownx.highlight
+   - pymdownx.keys
+   - pymdownx.emoji:
+       emoji_index: !!python/name:material.extensions.emoji.twemoji
+       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+   - attr_list
+   - md_in_html
+   - footnotes
+   - tables
+   - toc:
+       permalink: true
+ 
+ extra:
+   generator: false
+ 
+ extra_css:
+   - assets/css/extra.css
+ 
+ nav:
+   - 首页: index.md
+   - 创意生产方法论:
+       - 概述: 创意生产方法论/index.md
+       - 金融行业: 创意生产方法论/金融行业.md
+       - 教育行业: 创意生产方法论/教育行业.md
+       - 案例库: 创意生产方法论/案例库.md
+   - 平台素材生态:
+       - 概述: 创意策略-平台素材生态方向/index.md
+       - 策略介绍: 创意策略-平台素材生态方向/策略介绍.md
+       - 供给方法: 创意策略-平台素材生态方向/供给方法.md
+       - 案例库: 创意策略-平台素材生态方向/案例库.md
+   - 个人工具库: 个人工具库.md
+  - 标签: tags.md
+  - 搭建记录: 项目搭建记录.md

@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>案例库 - KB</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css"></head><body><div class=app><aside class=sidebar id=sidebar><div class=sidebar-header><a href=../../ class=sidebar-logo style=text-decoration:none;color:inherit><span class=sidebar-logo-img>K</span> 个人知识库</a></div><nav class=sidebar-nav><div class=nav-section><button class=nav-section-toggle onclick=ts(this)><span class=arrow>▶</span> 创意生产方法论</button><div class=nav-sub style=display:none><a href=pages/creative/ class=nav-item>概述</a><a href=pages/creative/finance/ class=nav-item>金融行业</a><a href=pages/creative/education/ class=nav-item>教育行业</a><a href=pages/creative/cases/ class=nav-item>案例库</a></div></div><div class=nav-section><button class=nav-section-toggle onclick=ts(this)><span class=arrow>▶</span> 平台素材生态</button><div class=nav-sub style=display:none><a href=pages/platform/ class=nav-item>概述</a><a href=pages/platform/strategy/ class=nav-item>策略介绍</a><a href=pages/platform/supply/ class=nav-item>供给方法</a><a href=pages/platform/cases/ class=nav-item>案例库</a></div></div><a href=pages/toolkit/ class=nav-item style=display:block;padding:0.35rem 0.9rem>个人工具库</a><a href=pages/tags/ class=nav-item style=display:block;padding:0.35rem 0.9rem>标签</a><a href=pages/buildlog/ class=nav-item style=display:block;padding:0.35rem 0.9rem>搭建记录</a></nav></aside><main class=main><article><div class=page-header><h1>案例库</h1><div class=page-tags><span class=page-tag>案例库</span><span class=page-tag>创意生产</span></div></div><div class=page-content><h1 id="_1">案例库</h1>
+<p>实战案例库，记录不同行业中的投放策略、创意方向和执行复盘。所有案例已做脱敏处理。</p>
+<p>## 金融行业案例</p>
+<table>
+<thead>
+<tr>
+<th>案例</th>
+<th>行业</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>待补充</td>
+<td>金融</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<p>## 教育行业案例</p>
+<table>
+<thead>
+<tr>
+<th>案例</th>
+<th>行业</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>待补充</td>
+<td>教育</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<p>## 案例结构参考</p>
+<p>每个案例建议包含：背景、挑战、策略、执行、结果、复盘</p></div></article></main></div><button class="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+<script>
+function ts(b){var s=b.nextElementSibling;var a=b.querySelector('.arrow');if(!s||s.style.display=='none'||s.style.display==''){s.style.display='block';if(a)a.classList.add('open')}else{s.style.display='none';if(a)a.classList.remove('open')}}
+function tm(){document.getElementById('sidebar').classList.toggle('open')}
+document.addEventListener('DOMContentLoaded',function(){var p=window.location.pathname;document.querySelectorAll('.nav-item').forEach(function(i){var h=i.getAttribute('href');if(h&&(p==h||p==h+'index.html'||p.startsWith(h))){i.classList.add('active');var s=i.closest('.nav-section');if(s){var b=s.querySelector('.nav-section-toggle');if(b){b.nextElementSibling.style.display='block';var a=b.querySelector('.arrow');if(a)a.classList.add('open')}}}})})})
+</script></body></html>
