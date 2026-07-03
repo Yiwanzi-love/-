@@ -1,0 +1,40 @@
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#e85d3a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+   <!-- 头部轮廓 -->
+   <circle cx="88" cy="62" r="24" stroke="#1a1a1a" stroke-width="2.2"/>
+   <!-- 头发 -->
+   <path d="M66 54q0-20 22-18 22-2 22 18" stroke="#1a1a1a" stroke-width="2"/>
+   <!-- 眼镜 -->
+   <circle cx="80" cy="62" r="7" stroke="#1a1a1a" stroke-width="1.8"/>
+   <circle cx="96" cy="62" r="7" stroke="#1a1a1a" stroke-width="1.8"/>
+   <line x1="87" y1="62" x2="89" y2="62" stroke="#1a1a1a" stroke-width="1.8"/>
+   <!-- 微笑 -->
+   <path d="M82 73q4 4 8 0" stroke="#e85d3a" stroke-width="1.8"/>
+   <!-- 身体 -->
+   <path d="M68 86v34" stroke="#1a1a1a" stroke-width="2"/>
+   <path d="M108 86v34" stroke="#1a1a1a" stroke-width="2"/>
+   <!-- 手臂 - 右手举着 lightbulb -->
+   <path d="M108 92q16-2 18-10l6-12" stroke="#1a1a1a" stroke-width="2"/>
+   <!-- 灯泡 -->
+   <circle cx="130" cy="66" r="10" stroke="#e85d3a" stroke-width="2.2"/>
+   <path d="M124 73q3 3 6 3l2 4" stroke="#e85d3a" stroke-width="2"/>
+   <path d="M136 73q-3 3-6 3l-2 4" stroke="#e85d3a" stroke-width="2"/>
+   <!-- 灯泡光线 -->
+   <path d="M130 55v-4" stroke="#e85d3a" stroke-width="1.5" opacity="0.6"/>
+   <path d="M118 60l-3-3" stroke="#e85d3a" stroke-width="1.5" opacity="0.6"/>
+   <path d="M142 60l3-3" stroke="#e85d3a" stroke-width="1.5" opacity="0.6"/>
+   <!-- 左手 - 自然垂下 -->
+   <path d="M68 92q-12-2-16 8l-4 8" stroke="#1a1a1a" stroke-width="2"/>
+   <!-- 桌子 -->
+   <line x1="44" y1="120" x2="128" y2="120" stroke="#1a1a1a" stroke-width="2"/>
+   <!-- 桌上的纸 -->
+   <rect x="76" y="126" width="32" height="22" rx="2" stroke="#1a1a1a" stroke-width="1.5" fill="#fdf2ef"/>
+   <!-- 纸上的线条 -->
+   <line x1="82" y1="133" x2="100" y2="133" stroke="#e85d3a" stroke-width="1.2" opacity="0.5"/>
+   <line x1="82" y1="138" x2="96" y2="138" stroke="#e85d3a" stroke-width="1.2" opacity="0.5"/>
+   <line x1="82" y1="143" x2="88" y2="143" stroke="#e85d3a" stroke-width="1.2" opacity="0.5"/>
+   <!-- 右侧装饰点 -->
+   <circle cx="156" cy="50" r="3" stroke="#e85d3a" stroke-width="1.5" fill="#e85d3a" opacity="0.3"/>
+   <circle cx="162" cy="80" r="2.5" stroke="#e85d3a" stroke-width="1.5" fill="#e85d3a" opacity="0.2"/>
+   <circle cx="148" cy="100" r="2" stroke="#e85d3a" stroke-width="1.5" fill="#e85d3a" opacity="0.25"/>
+ </svg>
+ 

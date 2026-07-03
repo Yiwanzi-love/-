@@ -1,0 +1,28 @@
+ # Python
+ __pycache__/
+ *.py[cod]
+ *$py.class
+ 
+ # MkDocs
+ site/
+ 
+ # OS
+ .DS_Store
+ Thumbs.db
+ Desktop.ini
+ 
+ # Editor
+ .vscode/
+ .idea/
+ *.swp
+ *.swo
+ 
+ # Obsidian
+ .obsidian/workspace
+ .trash/
+ 
+ # Old mkdocs files
+ mkdocs.yml
+ docs/assets/
+ site/
+ 
