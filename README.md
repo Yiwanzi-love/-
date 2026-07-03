@@ -1,47 +1,41 @@
- # 个人知识库
- 
- 互联网广告行业运营方法论的沉淀与分享。
- 
- ## 项目结构
- 
- ```
- knowledge-base/
- ├── docs/                    # 知识库内容（Markdown 源文件）
- │   ├── index.md            # 首页
- │   ├── tags.md             # 标签索引
- │   ├── 创意生产方法论/     # 模块一
- │   ├── 创意策略-平台素材生态方向/ # 模块二
- │   └── 个人工具库.md        # 模块三
- ├── mkdocs.yml              # 站点配置
- ├── .gitignore
- └── README.md
- ```
- 
- ## 工作流
- 
- 1. **编写**：用 Obsidian 打开 `docs/` 目录，编辑 Markdown 文件
- 2. **预览**：运行 `mkdocs serve`，在 `http://127.0.0.1:8000` 实时查看
- 3. **构建**：运行 `mkdocs build`，生成静态文件到 `site/` 目录
- 4. **发布**：推送到 GitHub，Cloudflare Pages 自动部署
- 
- ## 前置依赖
- 
- - Python 3.x
- - pip install mkdocs-material
- 
- ## 本地预览
- 
- ```bash
- mkdocs serve
- ```
- 
- 打开浏览器访问 `http://127.0.0.1:8000`
- 
- ## 构建静态站点
- 
- ```bash
- mkdocs build
- ```
- 
- 构建产物在 `site/` 目录下，可直接部署到任意静态托管服务。
- 
+﻿<div align="center">
+  <h1>个人知识库</h1>
+  <p>互联网广告行业运营方法论的沉淀与分享</p>
+</div>
+
+## 项目结构
+
+├── docs/              # Markdown 内容源（Obsidian Vault）
+├── assets/            # 静态资源（CSS / SVG 简笔画）
+├── pages/             # 构建产物（自动生成）
+├── index.html         # 首页
+├── build.py           # 内容构建脚本
+├── update.py          # 首页和资源部署脚本
+└── .github/workflows/ # GitHub Actions 自动部署
+
+## 本地开发
+
+### 前置依赖
+pip install markdown pyyaml pymdown-extensions
+
+### 预览
+python -m http.server 8000
+浏览器打开 http://127.0.0.1:8000
+
+### 更新内容
+在 docs/ 下编辑 Markdown 文件后：
+python build.py && python update.py
+然后刷新浏览器。
+
+## 部署到 GitHub Pages
+
+1. 在 GitHub 创建一个公开仓库
+2. 在本地运行以下命令推送代码：
+   git remote add origin https://github.com/你的用户名/你的仓库名.git
+   git branch -M main
+   git push -u origin main
+3. 在 GitHub 仓库页面进入 Settings > Pages，Source 选择 "GitHub Actions"
+4. 以后每次推送到 main 分支，GitHub Actions 会自动构建和部署
+5. 部署完成后，你的知识库就会在 https://你的用户名.github.io/你的仓库名 上线
+
+部署好之后，你在 Obsidian 里写新内容 → 推送到 GitHub → 网站自动更新。全程无需手动操作。
